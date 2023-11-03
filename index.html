@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>parallax</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Playpen Sans', cursive;
+      }
+
+      h2 {
+        font-size: 64px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: 2px 2px 5px #000;
+        opacity: 0.7;
+      }
+
+      p {
+        font-size: 20px;
+        color: #fff;
+        opacity: 0.7;
+      }
+
+      section {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/1.Intro.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .extra{
+        position: relative;
+      }
+
+      .extra h2{
+        position: absolute;
+        font-size: 30px;
+        color: #fff;
+        bottom: 1%;
+        right: 1%;
+      }
+
+      .section-2 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/2.jpg");
+      }
+      .section-3 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/3.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-4 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/4.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-5 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/5.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-6{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/6.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-7 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/7.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-8 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/8.jpg");
+        background-attachment: fixed;
+      }
+      .section-9 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/9.JPG");
+        background-attachment: fixed;
+      }
+
+      .section-10 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/10.jpg");
+        background-attachment: fixed;
+      }
+      .section-11 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/11.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-12{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/12.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-13 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/13.jpeg");
+        background-attachment: fixed;
+      }
+
+      .section-14 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/14.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-15 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/15.JPG");
+        background-attachment: fixed;
+      }
+
+      .section-16 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/16.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-17 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/17.jpg");
+        background-attachment: fixed;
+      }
+
+      .section-18 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/18.JPG");
+        background-attachment: fixed;
+      }
+
+      .section-19 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/19.jpg");
+        background-attachment: fixed;
+      }
+      .section-20 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/20.jpeg");
+        background-attachment: fixed;
+      }
+      .section-21 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/21.jpg");
+        background-attachment: fixed;
+      }
+      .section-22 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/22.jpg");
+        background-attachment: fixed;
+      }
+      .section-23 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/23.jpeg");
+        background-attachment: fixed;
+      }
+      .section-24{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/24.jpeg");
+        background-attachment: fixed;
+      }
+      .section-25 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/25.jpeg");
+        background-attachment: fixed;
+      }
+      .section-26 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/26.jpeg");
+        background-attachment: fixed;
+      }
+      .section-27 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/27.jpeg");
+        background-attachment: fixed;
+      }
+      .section-28 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/28.jpg");
+        background-attachment: fixed;
+      }
+      .section-29 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/29.jpeg");
+        background-attachment: fixed;
+      }
+      .section-30 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/30.jpeg");
+        background-attachment: fixed;
+      }
+
+      .section-31 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("imgaes/31.outro.jpeg");
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h2>Welcome</h2>
+        <p>To the friendship journel</p>
+      </div>
+    </section>
+    <section class="section-2">
+      <div>
+        <h2>A journel</h2>
+        <p>that tells a story</p>
+      </div>
+    </section>
+    <section class="section-3">
+      <div>
+        <h2>A story</h2>
+        <p>about an eternal connection</p>
+      </div>
+    </section>
+    <section class="section-4">
+      <div>
+        <h2>Between Us</h2>
+      </div>
+    </section>
+    <section class="section-5">
+      <div>
+        <h2>From here</h2>
+      </div>
+    </section>
+    <section class="section-6">
+      <div>
+        <h2>To here</h2>
+      </div>
+    </section>
+    <section class="section-7">
+      <div>
+        <h2>We all grew up</h2>
+      </div>
+    </section>
+    <section class="section-8">
+      <div>
+        <h2>From having</h2>
+        <p>tour together</p>
+      </div>
+    </section>
+    <section class="section-9 extra">
+      <div>
+        <h2>Cox's Bazar, chattogram</h2>
+      </div>
+    </section>
+    <section class="section-10 extra">
+      <div>
+        <h2>Chandronath Hill, Shitakundo</h2>
+      </div>
+    </section>
+    <section class="section-11 extra">
+      <div>
+        <h2>mohamaya lake, mirsarai</h2>
+      </div>
+    </section>
+    <section class="section-12 extra">
+      <div>
+        <h2>marayong tong hill, Bandarban</h2>
+      </div>
+    </section>
+    <section class="section-13 extra">
+      <div>
+        <h2>Jaflong, Sylhet</h2>
+      </div>
+    </section>
+    <section class="section-14 extra">
+      <div>
+        <h2>Mayabi Fountain, Sylhet</h2>
+      </div>
+    </section>
+    <section class="section-15 extra">
+      <div>
+        <h2>Alir Guha, Bandarban</h2>
+      </div>
+    </section>
+    <section class="section-16 extra">
+      <div>
+        <h2>Lalakhal, Sylhet</h2>
+      </div>
+    </section>
+    <section class="section-17 extra">
+      <div>
+        <h2>Ratargul, Sylhet</h2>
+      </div>
+    </section>
+    <section class="section-18">
+      <div>
+        <h2>To living</h2>
+        <p>every moment of our life</p>
+      </div>
+    </section>
+    <section class="section-19 extra">
+      <div>
+        <h2>Pohela boishak</h2>
+      </div>
+    </section>
+    <section class="section-20 extra">
+      <div>
+        <h2>Chilling inside a boat</h2>
+      </div>
+    </section>
+    <section class="section-21 extra">
+      <div>
+        <h2>Walking through the cloud</h2>
+      </div>
+    </section>
+    <section class="section-22 extra">
+      <div>
+        <h2>Eid-ul-fitr</h2>
+      </div>
+    </section>
+    <section class="section-23 extra">
+      <div>
+        <h2>CRB adda</h2>
+      </div>
+    </section>
+    <section class="section-24 extra">
+      <div>
+        <h2>Clan party</h2>
+      </div>
+    </section>
+    <section class="section-25">
+      <div>
+        <h2>We've shared</h2>
+        <p>a deep and enduring journey</p>
+      </div>
+    </section>
+    <section class="section-26">
+      <div>
+        <h2>journey</h2>
+        <p>that includes singing</p>
+      </div>
+    </section>
+    <section class="section-27">
+      <div>
+        <h2>journey</h2>
+        <p>that includes playing cards and chit-chats</p>
+      </div>
+    </section>
+    <section class="section-28">
+      <div>
+        <h2>journey</h2>
+        <p>that includes the sadness of saying goodbye</p>
+      </div>
+    </section>
+    <section class="section-29">
+      <div>
+        <h2>journey</h2>
+        <p>that includes staying linked amid life's rush</p>
+      </div>
+    </section>
+    <section class="section-30">
+      <div>
+        <h2>We cherish our collective existence</h2>
+        <p>which inspired us to name our group</p>
+      </div>
+    </section>
+    <section class="section-31">
+      <div>
+        <h2>Shudhu Amra ❤</h2>
+      </div>
+    </section>
+  </body>
+</html>
